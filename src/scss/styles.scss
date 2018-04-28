@@ -1,12 +1,13 @@
 // Variable Overrides
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=News+Cycle:400,700');
 // Bootstrap Sass Imports
 @import "node_modules/bootstrap/scss/bootstrap";
 
 html, body {
   background-color: #f8f9fa; /* Fills the page */
   color: #222;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'News Cycle', sans-serif;
+  font-weight: 400;
   height: 100%;
   width: 100%;
 }
@@ -20,6 +21,7 @@ html {
 
 .navbar {
   padding: .8rem;
+  border-bottom: 2px solid #c6a530;
 
   &-brand {
     img {
@@ -38,20 +40,26 @@ html {
   }
 }
 
+.navbar.bg-light {
+  opacity: 0.8;
+}
+
 .hero {
   height: 400px;
   background: url("/assets/background.png") no-repeat center top;
   background-size: cover;
   position: relative;
+  // max-width: 1080px;
 
   &__header {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     color: white;
+    font-weight: 400;
+    left: 50%;
+    position: absolute;
     text-align: center;
     text-shadow: 1px 1px 15px #000;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 75%;
   }
 }

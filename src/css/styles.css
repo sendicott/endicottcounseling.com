@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
+@import url("https://fonts.googleapis.com/css?family=News+Cycle:400,700");
 /*!
  * Bootstrap v4.1.0 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -6265,7 +6265,8 @@ html, body {
   background-color: #f8f9fa;
   /* Fills the page */
   color: #222;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'News Cycle', sans-serif;
+  font-weight: 400;
   height: 100%;
   width: 100%; }
 
@@ -6278,7 +6279,8 @@ html {
   /* Fix for absolute positioning */ }
 
 .navbar {
-  padding: .8rem; }
+  padding: .8rem;
+  border-bottom: 2px solid #c6a530; }
   .navbar-brand img {
     width: 170px; }
   .navbar-nav li {
@@ -6286,19 +6288,23 @@ html {
   .navbar-link {
     font-size: 1.1em; }
 
+.navbar.bg-light {
+  opacity: 0.8; }
+
 .hero {
   height: 400px;
   background: url("/assets/background.png") no-repeat center top;
   background-size: cover;
   position: relative; }
   .hero__header {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     color: white;
+    font-weight: 400;
+    left: 50%;
+    position: absolute;
     text-align: center;
     text-shadow: 1px 1px 15px #000;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 75%; }
 
 .carousel-inner img {
