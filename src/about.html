@@ -140,5 +140,26 @@
         </div>
     </div>
 </footer>
+
+<script src="https://embed.typeform.com/embed.js" type="text/javascript"></script>
+<script type="text/javascript">
+    let popup;
+    window.addEventListener('DOMContentLoaded', function () {
+        // When instantiating a popup embed, you must provide the URL
+        // of your typeform and your desired embed settings. If you don't
+        // provide any settings, a default 'popup' embed is instantiated.
+        popup = window.typeformEmbed.makePopup('https://endicottcounseling.typeform.com/to/RLapMn', {
+            mode: 'drawer_left',          
+            hideHeaders: true,
+            hideFooter: true
+        });
+    })
+
+    // Now we bind our buttons to open our previously instantiated
+    // embedded typeforms when clicked
+    document.getElementById('bt-left-drawer').addEventListener('click', function () {
+    popup.open();
+    });
+    </script>
     
 </body>
