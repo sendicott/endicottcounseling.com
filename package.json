@@ -12,9 +12,11 @@
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
     "gulp-sass": "^4.0.1"
   },
   "dependencies": {
+    "@typeform/embed": "^0.5.8",
     "bootstrap": "^4.1.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3"

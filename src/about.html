@@ -28,9 +28,6 @@
 			<li class="nav-item">
 				<a class="nav-link" href="about.html">About</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="connect.html">Connect</a>
-			</li>
 		</ul>
 	</div>
 </div>
@@ -65,7 +62,7 @@
             <p>Pregnancy is a baffling season of transition. Even the smoothest pregnancies require constant adjustment and adaptation. In many cases, pregnancy is a time with complex and difficult feelings.</p> 
             <p>I provide support to women and couples negotiating these feelings as well as to those encountering prenatal anxiety and depression. I also work with those experiencing perinatal loss.</p>
             <br>
-            <a href="" class="btn btn-primary">Connect</a>
+            <button class="btn btn-primary js-typeform">Connect</button>
         </div>
     </div>
 </div>
@@ -78,7 +75,7 @@
             <p>In recent years, research has been devoted to the significant challenge posed by the storm of life transitions, hormones, and emotions that we call postpartum. Every woman needs significant and multifaceted support during this time.</p>
             <p>I am passionate about providing postpartum women with attentive care. I work with women and couples experiencing postpartum anxiety, depression, difficulty transitioning into parenthood, and birth trauma.</p>
             <br>
-            <a href="" class="btn btn-primary">Connect</a>
+            <button class="btn btn-primary js-typeform">Connect</button>
         </div>
         <div class="col-lg-6 align-self-center">
             <img src="/assets/postpartum.png" class="img-fluid" alt="">
@@ -97,8 +94,7 @@
                 <p>Wendell Berry puts it well when he says “healing is impossible in loneliness; it is the opposite of loneliness.” These groups are the opposite of loneliness. They are here to provide you with companionship and understanding from others who are at a similar stage. Each group is therapist-led, gentle, safe and substantive.</p> 
                 <p>We are currently in the process of planning for summer prenatal and postpartum groups with a projected start in June. We keep our groups small (10 participants or less) and intimate. Groups cost $30/session and run for six weeks. Please email Zoe if you are unable to meet this cost but would like to join the group. As always, we do not let cost be prohibitive. If you want to be here, we will make a way. Groups meet in Charlotte, NC at 5105 Monroe Rd.</p>
                 <br>
-                <button id="bt-left-drawer" class="btn btn-primary">Connect</button>
-                <!-- <a href="" class="btn btn-primary">Connect</a> -->
+                <button class="btn btn-primary js-typeform">Connect</button>
             </div>
         </div>
     </div>
@@ -140,5 +136,24 @@
         </div>
     </div>
 </footer>
+
+<script src="https://embed.typeform.com/embed.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var popup;
+    var formButtons = document.querySelectorAll('.js-typeform');
+    window.addEventListener('DOMContentLoaded', function () {
+        popup = window.typeformEmbed.makePopup('https://endicottcounseling.typeform.com/to/RLapMn', {
+            mode: 'drawer_left',          
+            hideHeaders: true,
+            hideFooter: false
+        });
+    })
+
+    for (i = 0; i < formButtons.length; ++i) {
+        formButtons[i].addEventListener('click', function() {
+            popup.open();
+        });
+    }
+</script>
     
 </body>
