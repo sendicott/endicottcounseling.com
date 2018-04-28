@@ -1,8 +1,10 @@
 // Variable Overrides
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+// Bootstrap Sass Imports
+@import "node_modules/bootstrap/scss/bootstrap";
 
 html, body {
-  background: #f8f9fa; /* Fills the page */
+  background-color: #f8f9fa; /* Fills the page */
   color: #222;
   font-family: 'Poppins', sans-serif;
   height: 100%;
@@ -367,5 +369,3 @@ Extra (xl) large devices (large desktops, 1200px and up)
 
 
 
-// Bootstrap Sass Imports
-@import "node_modules/bootstrap/scss/bootstrap";

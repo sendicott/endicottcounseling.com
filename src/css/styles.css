@@ -1,281 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700");
-html, body {
-  background: #f8f9fa;
-  /* Fills the page */
-  color: #222;
-  font-family: 'Poppins', sans-serif;
-  height: 100%;
-  width: 100%; }
-
-html {
-  max-width: 1200px;
-  margin: 0 auto;
-  background: #f8f9fa;
-  /* Fills the page */
-  position: relative;
-  /* Fix for absolute positioning */ }
-
-.navbar {
-  padding: .8rem; }
-  .navbar-brand img {
-    width: 170px; }
-  .navbar-nav li {
-    padding-right: 20px; }
-  .navbar-link {
-    font-size: 1.1em; }
-
-.hero {
-  height: 400px;
-  background: url("/assets/background.png") no-repeat center top;
-  background-size: cover;
-  position: relative; }
-  .hero__header {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    text-shadow: 1px 1px 15px #000;
-    width: 75%; }
-
-.carousel-inner img {
-  width: 100%;
-  height: 100%; }
-
-.carousel-caption {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); }
-
-.carousel-caption h1 {
-  font-size: 500%;
-  text-transform: uppercase;
-  text-shadow: 1px 1px 15px #000; }
-
-.carousel-caption h3 {
-  font-size: 200%;
-  font-weight: 500;
-  padding-bottom: 1rem;
-  text-shadow: 1px 1px 10px #000; }
-
-.btn-primary {
-  background-color: #6648B1;
-  border: 1px solid #6648B1; }
-
-.btn-primary:hover {
-  background-color: #563D7C;
-  border: 1px solid #563D7C; }
-
-.jumbotron {
-  padding: 1rem;
-  border-radius: 0; }
-  .jumbotron a:hover {
-    text-decoration: none; }
-
-.padding {
-  padding-bottom: 2rem; }
-
-.care {
-  margin: 0 auto;
-  padding-top: 2rem;
-  width: 75% !important; }
-
-.care hr {
-  border-top: 2px solid #B4B4B4;
-  margin-bottom: 1rem;
-  margin-top: .3rem;
-  width: 95%; }
-
-.card-title {
-  color: #212529; }
-
-.fa-code {
-  color: #E54D26; }
-
-.fa-bold {
-  color: #563D7C; }
-
-.fa-css3 {
-  color: #2163AF; }
-
-.fa-code, .fa-bold, .fa-css3 {
-  font-size: 4em;
-  margin: 1rem; }
-
-.social a {
-  font-size: 4.5rem;
-  padding: 3rem; }
-
-.fa-facebook {
-  color: #3B5998; }
-
-.fa-twitter {
-  color: #00ACED; }
-
-.fa-google-plus-g {
-  color: #DD4B39; }
-
-.fa-instagram {
-  color: #517FA8; }
-
-.fa-facebook:hover,
-.fa-twitter:hover,
-.fa-google-plus-g:hover,
-.fa-instagram:hover {
-  color: #D5D5D5; }
-
-.connect {
-  margin: 0 auto;
-  padding-top: 2rem;
-  width: 75% !important; }
-  .connect hr {
-    border-top: 2px solid #B4B4B4;
-    margin-bottom: 1rem;
-    margin-top: .3rem;
-    width: 95%; }
-
-footer {
-  background-color: #3F3F3F;
-  color: #D5D5D5;
-  padding-top: 2rem; }
-
-hr.light {
-  border-top: 1px solid #D5D5D5;
-  margin-bottom: 1rem;
-  margin-top: .8rem;
-  width: 75%; }
-
-hr.light--100 {
-  width: 100%; }
-
-footer a {
-  color: #D5D5D5; }
-
-footer img {
-  width: 180px; }
-
-/*---About Page --*/
-.about-hero {
-  height: 400px;
-  background: url("/assets/about-background.png") no-repeat center top;
-  background-size: cover;
-  position: relative; }
-  .about-hero__header {
-    position: absolute;
-    right: 2%;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    text-align: center;
-    text-shadow: 1px 1px 15px #000;
-    width: 46%;
-    padding: 5px 0;
-    background-color: rgba(29, 29, 29, 0.3);
-    border-radius: 8px; }
-
-/*---Media Queries --*/
-@media (max-width: 576px) {
-  .carousel-caption {
-    top: 40%; }
-  .carousel-caption h1 {
-    font-size: 250%; }
-  .carousel-caption h3 {
-    font-size: 110%; }
-  .carousel-caption .btn {
-    font-size: 90%;
-    padding: 4px 8px; }
-  .carousel-indicators {
-    display: none; }
-  .display-4 {
-    font-size: 160%; }
-  social a {
-    font-size: 2em;
-    padding: .7rem; } }
-
-@media (max-width: 768px) {
-  .carousel-caption {
-    top: 45%; }
-  .carousel-caption h1 {
-    font-size: 350%; }
-  .carousel-caption h3 {
-    font-size: 140%;
-    font-weight: 400;
-    padding-bottom: .2rem; }
-  .carousel-caption .btn {
-    font-size: 95%;
-    padding: 8px 14px; }
-  .display-4 {
-    font-size: 200%; }
-  social a {
-    font-size: 2.5em;
-    padding: 1.2rem; } }
-
-@media (max-width: 992px) {
-  social a {
-    font-size: 4em;
-    padding: 2rem; } }
-
-/*---Firefox Bug Fix --*/
-.carousel-item {
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible; }
-
-/*--- Fixed Background Image --*/
-figure {
-  position: relative;
-  width: 100%;
-  height: 60%;
-  margin: 0 !important; }
-  @media (max-width: 992px) {
-    figure {
-      height: 30%; } }
-
-.fixed-wrap {
-  clip: rect(0, auto, auto, 0);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-#fixed {
-  background-image: url("/assets/pregnant.png");
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  will-change: transform; }
-
-/*--- Bootstrap Padding Fix --*/
-[class*="col-"] {
-  padding: 1rem; }
-
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
 /*!
  * Bootstrap v4.1.0 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -6537,3 +6260,281 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #dee2e6 !important; } }
+
+html, body {
+  background-color: #f8f9fa;
+  /* Fills the page */
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+  height: 100%;
+  width: 100%; }
+
+html {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f8f9fa;
+  /* Fills the page */
+  position: relative;
+  /* Fix for absolute positioning */ }
+
+.navbar {
+  padding: .8rem; }
+  .navbar-brand img {
+    width: 170px; }
+  .navbar-nav li {
+    padding-right: 20px; }
+  .navbar-link {
+    font-size: 1.1em; }
+
+.hero {
+  height: 400px;
+  background: url("/assets/background.png") no-repeat center top;
+  background-size: cover;
+  position: relative; }
+  .hero__header {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 15px #000;
+    width: 75%; }
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%; }
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.carousel-caption h1 {
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15px #000; }
+
+.carousel-caption h3 {
+  font-size: 200%;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  text-shadow: 1px 1px 10px #000; }
+
+.btn-primary {
+  background-color: #6648B1;
+  border: 1px solid #6648B1; }
+
+.btn-primary:hover {
+  background-color: #563D7C;
+  border: 1px solid #563D7C; }
+
+.jumbotron {
+  padding: 1rem;
+  border-radius: 0; }
+  .jumbotron a:hover {
+    text-decoration: none; }
+
+.padding {
+  padding-bottom: 2rem; }
+
+.care {
+  margin: 0 auto;
+  padding-top: 2rem;
+  width: 75% !important; }
+
+.care hr {
+  border-top: 2px solid #B4B4B4;
+  margin-bottom: 1rem;
+  margin-top: .3rem;
+  width: 95%; }
+
+.card-title {
+  color: #212529; }
+
+.fa-code {
+  color: #E54D26; }
+
+.fa-bold {
+  color: #563D7C; }
+
+.fa-css3 {
+  color: #2163AF; }
+
+.fa-code, .fa-bold, .fa-css3 {
+  font-size: 4em;
+  margin: 1rem; }
+
+.social a {
+  font-size: 4.5rem;
+  padding: 3rem; }
+
+.fa-facebook {
+  color: #3B5998; }
+
+.fa-twitter {
+  color: #00ACED; }
+
+.fa-google-plus-g {
+  color: #DD4B39; }
+
+.fa-instagram {
+  color: #517FA8; }
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-google-plus-g:hover,
+.fa-instagram:hover {
+  color: #D5D5D5; }
+
+.connect {
+  margin: 0 auto;
+  padding-top: 2rem;
+  width: 75% !important; }
+  .connect hr {
+    border-top: 2px solid #B4B4B4;
+    margin-bottom: 1rem;
+    margin-top: .3rem;
+    width: 95%; }
+
+footer {
+  background-color: #3F3F3F;
+  color: #D5D5D5;
+  padding-top: 2rem; }
+
+hr.light {
+  border-top: 1px solid #D5D5D5;
+  margin-bottom: 1rem;
+  margin-top: .8rem;
+  width: 75%; }
+
+hr.light--100 {
+  width: 100%; }
+
+footer a {
+  color: #D5D5D5; }
+
+footer img {
+  width: 180px; }
+
+/*---About Page --*/
+.about-hero {
+  height: 400px;
+  background: url("/assets/about-background.png") no-repeat center top;
+  background-size: cover;
+  position: relative; }
+  .about-hero__header {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 15px #000;
+    width: 46%;
+    padding: 5px 0;
+    background-color: rgba(29, 29, 29, 0.3);
+    border-radius: 8px; }
+
+/*---Media Queries --*/
+@media (max-width: 576px) {
+  .carousel-caption {
+    top: 40%; }
+  .carousel-caption h1 {
+    font-size: 250%; }
+  .carousel-caption h3 {
+    font-size: 110%; }
+  .carousel-caption .btn {
+    font-size: 90%;
+    padding: 4px 8px; }
+  .carousel-indicators {
+    display: none; }
+  .display-4 {
+    font-size: 160%; }
+  social a {
+    font-size: 2em;
+    padding: .7rem; } }
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    top: 45%; }
+  .carousel-caption h1 {
+    font-size: 350%; }
+  .carousel-caption h3 {
+    font-size: 140%;
+    font-weight: 400;
+    padding-bottom: .2rem; }
+  .carousel-caption .btn {
+    font-size: 95%;
+    padding: 8px 14px; }
+  .display-4 {
+    font-size: 200%; }
+  social a {
+    font-size: 2.5em;
+    padding: 1.2rem; } }
+
+@media (max-width: 992px) {
+  social a {
+    font-size: 4em;
+    padding: 2rem; } }
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible; }
+
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0 !important; }
+  @media (max-width: 992px) {
+    figure {
+      height: 30%; } }
+
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+#fixed {
+  background-image: url("/assets/pregnant.png");
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform; }
+
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+  padding: 1rem; }
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
