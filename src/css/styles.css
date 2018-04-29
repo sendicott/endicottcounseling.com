@@ -6442,6 +6442,41 @@ footer img {
     background-color: rgba(29, 29, 29, 0.3);
     border-radius: 8px; }
 
+/*---Services Page --*/
+.services-hero {
+  height: 400px;
+  background: url("/assets/mother-and-child.png") no-repeat center;
+  background-size: cover;
+  position: relative; }
+  .services-hero__header {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 15px #000;
+    padding: 5px 0;
+    background-color: rgba(29, 29, 29, 0.3);
+    border-radius: 8px; }
+
+.faq-hero {
+  height: 400px;
+  background: url("/assets/faq-background.jpg") no-repeat center;
+  background-size: cover;
+  position: relative; }
+  .faq-hero__header {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 15px #000;
+    padding: 5px 0;
+    background-color: rgba(29, 29, 29, 0.3);
+    border-radius: 8px; }
+
 /*---Media Queries --*/
 @media (max-width: 576px) {
   .carousel-caption {
@@ -6477,7 +6512,11 @@ footer img {
     font-size: 200%; }
   social a {
     font-size: 2.5em;
-    padding: 1.2rem; } }
+    padding: 1.2rem; }
+  .services-hero__header {
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%); } }
 
 @media (max-width: 992px) {
   social a {
