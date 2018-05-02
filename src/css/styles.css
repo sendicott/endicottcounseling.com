@@ -6268,10 +6268,11 @@ html, body {
   font-family: 'News Cycle', sans-serif;
   font-weight: 400;
   height: 100%;
+  padding-top: 55px;
   width: 100%; }
 
 html {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
   background: #f8f9fa;
   /* Fills the page */
@@ -6279,7 +6280,7 @@ html {
   /* Fix for absolute positioning */ }
 
 .navbar {
-  padding: .8rem;
+  padding: 13px;
   border-bottom: 2px solid #c6a530; }
   .navbar-brand img {
     width: 170px; }
@@ -6324,7 +6325,7 @@ html {
 .carousel-caption h3 {
   font-size: 200%;
   font-weight: 500;
-  padding-bottom: 1rem;
+  padding-bottom: 16px;
   text-shadow: 1px 1px 10px #000; }
 
 .btn-primary {
@@ -6336,92 +6337,85 @@ html {
   border: 1px solid #563D7C; }
 
 .jumbotron {
-  padding: 1rem;
+  padding: 16px;
   border-radius: 0; }
   .jumbotron a:hover {
     text-decoration: none; }
 
 .padding {
-  padding-bottom: 2rem; }
+  padding-bottom: 32px; }
 
 .care {
   margin: 0 auto;
-  padding-top: 2rem;
+  padding-top: 32px;
   width: 75% !important; }
 
 .care hr {
   border-top: 2px solid #B4B4B4;
-  margin-bottom: 1rem;
-  margin-top: .3rem;
+  margin-bottom: 16px;
+  margin-top: 5px;
   width: 95%; }
 
 .card-title {
   color: #212529; }
 
-.fa-code {
-  color: #E54D26; }
-
-.fa-bold {
-  color: #563D7C; }
-
-.fa-css3 {
-  color: #2163AF; }
-
-.fa-code, .fa-bold, .fa-css3 {
-  font-size: 4em;
-  margin: 1rem; }
-
-.social a {
-  font-size: 4.5rem;
-  padding: 3rem; }
-
 .fa-facebook {
-  color: #3B5998; }
-
-.fa-twitter {
-  color: #00ACED; }
-
-.fa-google-plus-g {
-  color: #DD4B39; }
+  color: #666; }
 
 .fa-instagram {
-  color: #517FA8; }
+  color: #666; }
 
 .fa-facebook:hover,
-.fa-twitter:hover,
-.fa-google-plus-g:hover,
 .fa-instagram:hover {
-  color: #D5D5D5; }
+  color: white; }
 
 .connect {
   margin: 0 auto;
-  padding-top: 2rem;
+  padding-top: 32px;
   width: 75% !important; }
   .connect hr {
     border-top: 2px solid #B4B4B4;
-    margin-bottom: 1rem;
-    margin-top: .3rem;
+    margin-bottom: 16px;
+    margin-top: 5px;
     width: 95%; }
 
-footer {
+.footer {
   background-color: #3F3F3F;
   color: #D5D5D5;
-  padding-top: 2rem; }
+  padding-top: 32px; }
+  .footer p a {
+    color: #D5D5D5;
+    opacity: .8; }
+    .footer p a:hover {
+      color: white;
+      text-decoration: none; }
+  .footer img {
+    width: 180px; }
+  .footer__bottom {
+    background-color: black;
+    color: #666;
+    text-align: center; }
+    .footer__bottom p {
+      margin-bottom: 0; }
+  .footer__social {
+    padding-top: 0; }
+    .footer__social a {
+      font-size: 32px;
+      padding: 16px; }
+      @media (min-width: 768px) {
+        .footer__social a {
+          padding: 0 16px; } }
+      @media (min-width: 992px) {
+        .footer__social a {
+          line-height: 1; } }
 
 hr.light {
   border-top: 1px solid #D5D5D5;
-  margin-bottom: 1rem;
-  margin-top: .8rem;
+  margin: 16px auto;
   width: 75%; }
 
 hr.light--100 {
   width: 100%; }
-
-footer a {
-  color: #D5D5D5; }
-
-footer img {
-  width: 180px; }
 
 /*---About Page --*/
 .about-hero {
@@ -6477,51 +6471,16 @@ footer img {
     background-color: rgba(29, 29, 29, 0.3);
     border-radius: 8px; }
 
-/*---Media Queries --*/
-@media (max-width: 576px) {
-  .carousel-caption {
-    top: 40%; }
-  .carousel-caption h1 {
-    font-size: 250%; }
-  .carousel-caption h3 {
-    font-size: 110%; }
-  .carousel-caption .btn {
-    font-size: 90%;
-    padding: 4px 8px; }
-  .carousel-indicators {
-    display: none; }
-  .display-4 {
-    font-size: 160%; }
-  social a {
-    font-size: 2em;
-    padding: .7rem; } }
-
-@media (max-width: 768px) {
-  .carousel-caption {
-    top: 45%; }
-  .carousel-caption h1 {
-    font-size: 350%; }
-  .carousel-caption h3 {
-    font-size: 140%;
-    font-weight: 400;
-    padding-bottom: .2rem; }
-  .carousel-caption .btn {
-    font-size: 95%;
-    padding: 8px 14px; }
-  .display-4 {
-    font-size: 200%; }
-  social a {
-    font-size: 2.5em;
-    padding: 1.2rem; }
-  .services-hero__header {
-    left: 50%;
-    top: 80%;
-    transform: translate(-50%, -50%); } }
-
-@media (max-width: 992px) {
-  social a {
-    font-size: 4em;
-    padding: 2rem; } }
+.display-4 {
+  font-size: 160%; }
+  @media (min-width: 576px) {
+    .display-4 {
+      font-size: 200%; } }
+  @media (min-width: 768px) {
+    .display-4 {
+      font-size: 56px;
+      font-weight: 300;
+      line-height: 1.2; } }
 
 /*---Firefox Bug Fix --*/
 .carousel-item {
@@ -6535,11 +6494,11 @@ footer img {
 figure {
   position: relative;
   width: 100%;
-  height: 60%;
+  height: 30%;
   margin: 0 !important; }
-  @media (max-width: 992px) {
+  @media (min-width: 992px) {
     figure {
-      height: 30%; } }
+      height: 40%; } }
 
 .fixed-wrap {
   clip: rect(0, auto, auto, 0);
@@ -6565,21 +6524,4 @@ figure {
 
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
-  padding: 1rem; }
-
-/*
-Extra small (xs) devices (portrait phones, less than 576px)
-No media query since this is the default in Bootstrap
-
-Small (sm) devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-Medium (md) devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-Large (lg) devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-Extra (xl) large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-*/
+  padding: 16px; }
