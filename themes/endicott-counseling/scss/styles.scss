@@ -1,14 +1,16 @@
-// Variable Overrides
-@import url('https://fonts.googleapis.com/css?family=News+Cycle:400,700');
 // Bootstrap Sass Imports
 @import "node_modules/bootstrap/scss/bootstrap";
 
+// Variable Overrides
+@import url('https://fonts.googleapis.com/css?family=News+Cycle:400,700');
+
 html, body {
   background-color: #f8f9fa; /* Fills the page */
-  color: #222;
+  color: #333;
   font-family: 'News Cycle', sans-serif;
   font-weight: 400;
   height: 100%;
+  max-width: 1440px;
   padding-top: 55px;
   width: 100%;
 }
@@ -23,6 +25,7 @@ html {
 .navbar {
   padding: 13px;
   border-bottom: 2px solid #c6a530;
+  max-width: 1440px;
 
   &-brand {
     img {
@@ -41,13 +44,9 @@ html {
   }
 }
 
-.navbar.bg-light {
-  opacity: 0.8;
-}
-
 .hero {
   height: 400px;
-  background: url("/assets/background.png") no-repeat center top;
+  background: url("/images/background.png") no-repeat center top;
   background-size: cover;
   position: relative;
   // max-width: 1080px;
@@ -226,7 +225,7 @@ hr.light--100 {
 
 .about-hero {
   height: 400px;
-  background: url("/assets/about-background.png") no-repeat center top;
+  background: url("/images/about-background.png") no-repeat center top;
   background-size: cover;
   position: relative;
 
@@ -249,7 +248,7 @@ hr.light--100 {
 
 .services-hero {
   height: 400px;
-  background: url("/assets/mother-and-child.png") no-repeat center;
+  background: url("/images/mother-and-child.png") no-repeat center;
   background-size: cover;
   position: relative;
 
@@ -269,7 +268,7 @@ hr.light--100 {
 
 .faq-hero {
   height: 400px;
-  background: url("/assets/faq-background.jpg") no-repeat center;
+  background: url("/images/faq-background.jpg") no-repeat center;
   background-size: cover;
   position: relative;
 
@@ -331,8 +330,15 @@ figure {
   height: 100%;
 }
 
+.fixed-top {
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 103;
+  width: 100%;
+}
+
 #fixed {
-  background-image: url('/assets/pregnant.png');
+  background-image: url('/images/pregnant.png');
   position: fixed;
   display: block;
   top: 0;

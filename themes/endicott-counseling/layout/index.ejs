@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zoë Endicott Counseling</title>
+    <%- css(['/assets/css/bootstrap.css', '/assets/css/styles.css']) %>
+    <%- favicon_tag('images/favicon.ico?v=2'); %>
+</head>
+<body>
+    <%- partial('partial/header') %>
+    <%- partial('partial/pages/' + page.canonical_path.split('.')[0]) %>
+    <%- partial('partial/footer') %>
+
+<%- js(['/assets/js/jquery.min.js', '/assets/js/popper.min.js', '/assets/js/bootstrap.min.js', 'https://use.fontawesome.com/releases/v5.0.8/js/all.js', 'https://embed.typeform.com/embed.js']) %>
+<script type="text/javascript">
+    (function(){
+        window.addEventListener('DOMContentLoaded', function () {
+            var formButtons = document.querySelectorAll('.js-typeform');
+            formButtons = Array.prototype.slice.call(formButtons);
+            formButtons.forEach(function(button) {
+                button.addEventListener('click', function(e) {
+                    if (window.typeformEmbed && Object.prototype.hasOwnProperty.call(window.typeformEmbed, 'makePopup')) {
+                        window.typeformEmbed.makePopup('https://endicottcounseling.typeform.com/to/RLapMn', {
+                            mode: 'drawer_left',          
+                            hideHeaders: true,
+                            hideFooter: false
+                        }).open();
+                    }
+                });
+            });
+        });
+    })();
+</script>
+</body>
+</html>
