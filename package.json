@@ -6,7 +6,8 @@
     "version": "3.7.1"
   },
   "scripts": {
-    "dev": "gulp dev && hexo server"
+    "dev": "gulp dev && hexo server",
+    "build": "hexo generate"
   },
   "dependencies": {
     "bootstrap": "^4.1.1",
