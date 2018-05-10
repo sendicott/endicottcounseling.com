@@ -1,0 +1,358 @@
+// Bootstrap Sass Imports
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Variable Overrides
+@import url('https://fonts.googleapis.com/css?family=News+Cycle:400,700');
+
+html, body {
+  background-color: #f8f9fa; /* Fills the page */
+  color: #222;
+  font-family: 'News Cycle', sans-serif;
+  font-weight: 400;
+  height: 100%;
+  max-width: 1440px;
+  padding-top: 55px;
+  width: 100%;
+}
+
+html {
+  max-width: 1440px;
+  margin: 0 auto;
+  background: #f8f9fa; /* Fills the page */
+  position: relative; /* Fix for absolute positioning */
+}
+
+.navbar {
+  padding: 13px;
+  border-bottom: 2px solid #c6a530;
+  max-width: 1440px;
+
+  &-brand {
+    img {
+      width: 170px;
+    }
+  }
+
+  &-nav {
+    li {
+      padding-right: 20px;
+    }
+  }
+
+  &-link {
+    font-size: 1.1em;
+  }
+}
+
+.hero {
+  height: 400px;
+  background: url("/images/background.png") no-repeat center top;
+  background-size: cover;
+  position: relative;
+  // max-width: 1080px;
+
+  &__header {
+    color: white;
+    font-weight: 400;
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 1px 15px #000;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+  }
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-caption h1 {
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15px #000;
+}
+
+.carousel-caption h3 {
+  font-size: 200%;
+  font-weight: 500;
+  padding-bottom: 16px;
+  text-shadow: 1px 1px 10px #000;
+}
+
+.btn-primary {
+  background-color: #6648B1;
+  border: 1px solid #6648B1;
+}
+
+.btn-primary:hover {
+  background-color: #563D7C;
+  border: 1px solid #563D7C;
+}
+
+.jumbotron {
+  padding: 16px;
+  border-radius: 0;
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.padding {
+  padding-bottom: 32px;
+}
+
+.care {
+  margin: 0 auto;
+  padding-top: 32px;
+  width: 75% !important;
+}
+
+.care hr {
+  border-top: 2px solid #B4B4B4;
+  margin-bottom: 16px;
+  margin-top: 5px;
+  width: 95%;
+}
+
+.card {
+  &-title {
+    color: #212529;
+  }
+}
+
+.fa-facebook {
+  color: #666;
+}
+
+.fa-instagram {
+  color: #666;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover {
+  color: white;
+}
+
+.connect {
+  margin: 0 auto;
+  padding-top: 32px;
+  width: 75% !important;
+
+  & hr {
+    border-top: 2px solid #B4B4B4;
+    margin-bottom: 16px;
+    margin-top: 5px;
+    width: 95%;
+  }
+}
+
+.footer {
+  background-color: #3F3F3F;
+  color: #D5D5D5;
+  padding-top: 32px;
+
+  & p a {
+    color: #D5D5D5;
+    opacity: .8;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  & img {
+    width: 180px;
+  }
+
+  &__bottom {
+    background-color: black;
+    color: #666;
+    text-align: center;
+
+    // @media (min-width: 992px) {
+    //   text-align: left;
+    // }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__social {
+    padding-top: 0;
+
+    // @media (min-width: 992px) {
+    //   text-align: right;
+    // }
+
+    a {
+      font-size: 32px;
+      padding: 16px;
+
+      @include media-breakpoint-up(md) {
+        padding: 0 16px; 
+      }
+
+      @media (min-width: 992px) {
+        line-height: 1;
+      }
+    }
+  }
+}
+
+hr.light {
+  border-top: 1px solid #D5D5D5;
+  margin: 16px auto;
+  width: 75%;
+}
+
+hr.light--100 {
+  width: 100%;
+}
+
+/*---About Page --*/
+
+.about-hero {
+  height: 400px;
+  background: url("/images/about-background.png") no-repeat center top;
+  background-size: cover;
+  position: relative;
+
+  &__header {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 15px #000;
+    width: 46%;
+    padding: 5px 0;
+    background-color: rgba(29,29,29,0.3);
+    border-radius: 8px;
+  }
+}
+
+/*---Services Page --*/
+
+.services-hero {
+  height: 400px;
+  background: url("/images/mother-and-child.png") no-repeat center;
+  background-size: cover;
+  position: relative;
+
+  &__header {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 15px #000;
+    padding: 5px 0;
+    background-color: rgba(29, 29, 29, 0.3);
+    border-radius: 8px;
+  }
+}
+
+.faq-hero {
+  height: 400px;
+  background: url("/images/faq-background.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+
+  &__header {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 15px #000;
+    padding: 5px 0;
+    background-color: rgba(29, 29, 29, 0.3);
+    border-radius: 8px;
+  }
+}
+
+.display-4 {
+  font-size: 160%;
+
+  @media (min-width: 576px) {
+    font-size: 200%; 
+  }
+
+  @media (min-width: 768px) {
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 1.2;
+  }
+}
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  margin: 0!important;
+
+  @media (min-width: 992px) {
+    height: 40%;
+  }
+}
+
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.fixed-top {
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: 103;
+  width: 100%;
+}
+
+#fixed {
+  background-image: url('/images/pregnant.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 16px;
+}
