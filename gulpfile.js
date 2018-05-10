@@ -3,7 +3,7 @@ var sass        = require('gulp-sass');
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-    return gulp.src(['themes/endicott-counseling/source/scss/styles.scss'])
+    return gulp.src(['themes/endicott-counseling/scss/styles.scss'])
         .pipe(sass())
         .pipe(gulp.dest('themes/endicott-counseling/source/assets/css'));
 });
@@ -16,7 +16,7 @@ gulp.task('sass', function() {
 
 // Static Server + watching scss/html files
 gulp.task('watch', ['sass'], function() {
-    gulp.watch(['themes/endicott-counseling/source/scss/**/*.scss'], ['sass']);
+    gulp.watch(['themes/endicott-counseling/scss/**/*.scss'], ['sass']);
 });
 
 gulp.task('dev', ['watch']);

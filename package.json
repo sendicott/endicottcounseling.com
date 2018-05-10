@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "gulp dev && hexo server",
-    "build": "hexo generate"
+    "build": "gulp build && hexo generate"
   },
   "dependencies": {
     "bootstrap": "^4.1.1",
