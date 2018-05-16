@@ -99,8 +99,9 @@ html {
 }
 
 .jumbotron {
-  padding: 16px;
   border-radius: 0;
+  padding: 16px;
+  margin-bottom: 0;
 
   a:hover {
     text-decoration: none;
@@ -265,6 +266,30 @@ hr.light--100 {
     border-radius: 8px;
   }
 }
+
+/*---Groups Page --*/
+
+.groups-hero {
+  height: 400px;
+  background: url("/images/group--page-header.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+
+  &__header {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 15px #000;
+    padding: 5px 0;
+    background-color: rgba(29, 29, 29, 0.3);
+    border-radius: 8px;
+  }
+}
+
+/*---FAQ Page --*/
 
 .faq-hero {
   height: 400px;
