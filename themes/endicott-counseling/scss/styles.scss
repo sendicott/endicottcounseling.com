@@ -2,12 +2,13 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
 // Variable Overrides
-@import url('https://fonts.googleapis.com/css?family=News+Cycle:400,700');
+@import url("https://fonts.googleapis.com/css?family=News+Cycle:400,700");
 
-html, body {
+html,
+body {
   background-color: #f8f9fa; /* Fills the page */
   color: #333;
-  font-family: 'News Cycle', sans-serif;
+  font-family: "News Cycle", sans-serif;
   font-weight: 400;
   height: 100%;
   max-width: 1440px;
@@ -89,13 +90,13 @@ html {
 }
 
 .btn-primary {
-  background-color: #6648B1;
-  border: 1px solid #6648B1;
+  background-color: #6648b1;
+  border: 1px solid #6648b1;
 }
 
 .btn-primary:hover {
-  background-color: #563D7C;
-  border: 1px solid #563D7C;
+  background-color: #563d7c;
+  border: 1px solid #563d7c;
 }
 
 .jumbotron {
@@ -119,7 +120,7 @@ html {
 }
 
 .care hr {
-  border-top: 2px solid #B4B4B4;
+  border-top: 2px solid #b4b4b4;
   margin-bottom: 16px;
   margin-top: 5px;
   width: 95%;
@@ -150,7 +151,7 @@ html {
   width: 75% !important;
 
   & hr {
-    border-top: 2px solid #B4B4B4;
+    border-top: 2px solid #b4b4b4;
     margin-bottom: 16px;
     margin-top: 5px;
     width: 95%;
@@ -158,13 +159,13 @@ html {
 }
 
 .footer {
-  background-color: #3F3F3F;
-  color: #D5D5D5;
+  background-color: #3f3f3f;
+  color: #d5d5d5;
   padding-top: 32px;
 
   & p a {
-    color: #D5D5D5;
-    opacity: .8;
+    color: #d5d5d5;
+    opacity: 0.8;
 
     &:hover {
       color: white;
@@ -202,7 +203,7 @@ html {
       padding: 16px;
 
       @include media-breakpoint-up(md) {
-        padding: 0 16px; 
+        padding: 0 16px;
       }
 
       @media (min-width: 992px) {
@@ -213,7 +214,7 @@ html {
 }
 
 hr.light {
-  border-top: 1px solid #D5D5D5;
+  border-top: 1px solid #d5d5d5;
   margin: 16px auto;
   width: 75%;
 }
@@ -240,7 +241,7 @@ hr.light--100 {
     text-shadow: 1px 1px 15px #000;
     width: 46%;
     padding: 5px 0;
-    background-color: rgba(29,29,29,0.3);
+    background-color: rgba(29, 29, 29, 0.3);
     border-radius: 8px;
   }
 }
@@ -315,7 +316,7 @@ hr.light--100 {
   font-size: 160%;
 
   @media (min-width: 576px) {
-    font-size: 200%; 
+    font-size: 200%;
   }
 
   @media (min-width: 768px) {
@@ -339,7 +340,7 @@ figure {
   position: relative;
   width: 100%;
   height: 30%;
-  margin: 0!important;
+  margin: 0 !important;
 
   @media (min-width: 992px) {
     height: 40%;
@@ -363,7 +364,7 @@ figure {
 }
 
 #fixed {
-  background-image: url('/images/pregnant.png');
+  background-image: url("/images/pregnant.png");
   position: fixed;
   display: block;
   top: 0;
@@ -373,11 +374,11 @@ figure {
   background-size: cover;
   background-position: center center;
   -webkit-transform: translateZ(0);
-          transform: translateZ(0);
+  transform: translateZ(0);
   will-change: transform;
 }
 
 /*--- Bootstrap Padding Fix --*/
 [class*="col-"] {
-    padding: 16px;
+  padding: 16px;
 }
