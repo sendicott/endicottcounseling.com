@@ -3,15 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.7.1"
+    "version": "3.9.0"
   },
   "scripts": {
-    "dev": "gulp dev && hexo server",
-    "build": "gulp build && hexo generate"
+    "dev": "gulp dev",
+    "build": "gulp build && hexo generate",
+    "serve": "hexo server"
   },
   "dependencies": {
     "bootstrap": "^4.1.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-sass": "^4.0.1",
     "hexo": "^3.2.0",
     "hexo-browsersync": "^0.3.0",
