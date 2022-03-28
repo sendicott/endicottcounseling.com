@@ -1,13 +1,10 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-
 // Compile sass into CSS & auto-inject into browsers
-gulp.task("sass", function () {
-  return gulp
-    .src(["themes/endicott-counseling/scss/styles.scss"])
-    .pipe(sass())
-    .pipe(gulp.dest("themes/endicott-counseling/source/assets/css"));
-});
+// task('build', function () {
+//   return gulp
+//     .src(["themes/endicott-counseling/scss/styles.scss"])
+//     .pipe(sass())
+//     .pipe(gulp.dest("themes/endicott-counseling/source/assets/css"));
+// });
 
 // Move the javascript files into our /src/js folder
 // gulp.task('js', function() {
@@ -16,10 +13,27 @@ gulp.task("sass", function () {
 //     });
 
 // Static Server + watching scss/html files
-gulp.task("watch", function () {
-  gulp.watch("themes/endicott-counseling/scss/**/*.scss", gulp.series("sass"));
-});
+// watch("themes/endicott-counseling/scss/**/*.scss", gulp.series("sass"));
 
-gulp.task("dev", gulp.series("watch"));
+// gulp.task("dev", gulp.series("watch"));
 
-gulp.task("build", gulp.series("sass"));
+// gulp.task("build", gulp.series("sass"));
+
+
+const { src, dest, watch } = require('gulp');
+const compileSass = require('gulp-sass');
+
+compileSass.compiler = require('node-sass');
+
+const bundleSass = () => {
+  return src('themes/endicott-counseling/scss/styles.scss')
+    .pipe(compileSass().on('error', compileSass.logError))
+    .pipe(dest('themes/endicott-counseling/source/assets/css'));
+};
+
+const devWatch = () => {
+  watch('themes/endicott-counseling/scss/**/*.scss', bundleSass);
+};
+
+exports.bundleSass = bundleSass;
+exports.devWatch = devWatch;
