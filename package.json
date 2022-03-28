@@ -28,6 +28,9 @@
     "popper.js": "^1.14.3"
   },
   "devDependencies": {
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sourcemaps": "^3.0.0",
     "node-sass": "^7.0.1"
   }
 }
