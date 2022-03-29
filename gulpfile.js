@@ -1,25 +1,30 @@
-var gulp = require("gulp");
-var sass = require("gulp-sass");
+const { src, dest, watch, series } = require('gulp');
+const compileSass = require('gulp-sass');
+const minifyCss = require('gulp-clean-css');
+const sourceMaps = require('gulp-sourcemaps');
+const concat = require('gulp-concat');
 
-// Compile sass into CSS & auto-inject into browsers
-gulp.task("sass", function () {
-  return gulp
-    .src(["themes/endicott-counseling/scss/styles.scss"])
-    .pipe(sass())
-    .pipe(gulp.dest("themes/endicott-counseling/source/assets/css"));
-});
+compileSass.compiler = require('node-sass');
 
-// Move the javascript files into our /src/js folder
-// gulp.task('js', function() {
-//     return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
-//         .pipe(gulp.dest("src/js"));
-//     });
+const bundleSass = () => {
+  return src('themes/endicott-counseling/scss/styles.scss')
+    .pipe(sourceMaps.init())
+    .pipe(compileSass().on('error', compileSass.logError))
+    .pipe(minifyCss())
+    .pipe(sourceMaps.write())
+    .pipe(concat('bundle.css'))
+    .pipe(dest('themes/endicott-counseling/source/assets/css'));
+};
 
-// Static Server + watching scss/html files
-gulp.task("watch", function () {
-  gulp.watch("themes/endicott-counseling/scss/**/*.scss", gulp.series("sass"));
-});
+const bundleJs = () => {
+  return src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
+    .pipe(dest('src/js'));
+};
 
-gulp.task("dev", gulp.series("watch"));
+const devWatch = () => {
+  watch('themes/endicott-counseling/scss/**/*.scss', bundleSass);
+};
 
-gulp.task("build", gulp.series("sass"));
+exports.bundleSass = bundleSass;
+exports.bundleJs = bundleJs;
+exports.devWatch = devWatch;
