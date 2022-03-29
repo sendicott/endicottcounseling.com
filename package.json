@@ -1,9 +1,9 @@
 {
   "name": "hexo-site",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "hexo": {
-    "version": "3.9.0"
+    "version": "6.1.0"
   },
   "scripts": {
     "dev": "gulp devWatch",
@@ -14,7 +14,7 @@
     "bootstrap": "^4.1.1",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.1",
-    "hexo": "^3.2.0",
+    "hexo": "^6.1.0",
     "hexo-browsersync": "^0.3.0",
     "hexo-generator-archive": "^0.1.4",
     "hexo-generator-category": "^0.1.3",
