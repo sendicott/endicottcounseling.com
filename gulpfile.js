@@ -1,30 +1,21 @@
-const { src, dest, watch, series } = require('gulp');
-const compileSass = require('gulp-sass');
-const minifyCss = require('gulp-clean-css');
-const sourceMaps = require('gulp-sourcemaps');
-const concat = require('gulp-concat');
+const gulp = require("gulp");
+const { series, watch } = require("gulp");
+const sass = require('gulp-sass')(require('sass'));
+const babel = require('@babel/core');
 
-compileSass.compiler = require('node-sass');
+// Compile sass into CSS & auto-inject into browsers
+function compileSass() {
+  return gulp
+    .src(["themes/endicott-counseling/scss/**/*.scss"])
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("themes/endicott-counseling/source/assets/css"));
+}
 
-const bundleSass = () => {
-  return src('themes/endicott-counseling/scss/styles.scss')
-    .pipe(sourceMaps.init())
-    .pipe(compileSass().on('error', compileSass.logError))
-    .pipe(minifyCss())
-    .pipe(sourceMaps.write())
-    .pipe(concat('bundle.css'))
-    .pipe(dest('themes/endicott-counseling/source/assets/css'));
-};
 
-const bundleJs = () => {
-  return src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
-    .pipe(dest('src/js'));
-};
+// Static Server + watching scss/html files
+function watchFiles() {
+  watch("themes/endicott-counseling/scss/**/*.scss", compileSass);
+}
 
-const devWatch = () => {
-  watch('themes/endicott-counseling/scss/**/*.scss', bundleSass);
-};
-
-exports.bundleSass = bundleSass;
-exports.bundleJs = bundleJs;
-exports.devWatch = devWatch;
+exports.build = series(compileSass);
+exports.dev = series(compileSass, watchFiles);
