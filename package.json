@@ -6,8 +6,8 @@
     "version": "6.3.0"
   },
   "scripts": {
-    "dev": "gulp devWatch",
-    "build": "gulp bundleSass && hexo generate",
+    "dev": "gulp dev",
+    "build": "gulp build && hexo generate",
     "serve": "hexo server"
   },
   "dependencies": {
