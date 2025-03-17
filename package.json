@@ -6,14 +6,16 @@
     "version": "6.3.0"
   },
   "scripts": {
-    "dev": "gulp dev",
-    "build": "gulp build && hexo generate",
-    "serve": "hexo server"
+    "compileSass": "sass themes/endicott-counseling/scss/styles.scss themes/endicott-counseling/source/assets/css/styles.css --no-source-map --load-path=node_modules/bootstrap/scss --quiet-deps",
+    "watchSass": "sass --watch themes/endicott-counseling/scss:themes/endicott-counseling/source/assets/css --no-source-map --load-path=node_modules/bootstrap/scss --quiet-deps",
+    "dev": "npm run compileSass && npm run watchSass",
+    "serve": "hexo server",
+    "build": "hexo clean && npm run compileSass && hexo generate",
+    "clean": "hexo clean"
   },
   "dependencies": {
     "babel": "^6.23.0",
-    "bootstrap": "^4.1.1",
-    "gulp": "^4.0.2",
+    "bootstrap": "^5.3.3",
     "hexo": "^6.3.0",
     "hexo-browsersync": "^0.3.0",
     "hexo-generator-archive": "^0.1.4",
@@ -31,7 +33,6 @@
     "@babel/core": "^7.20.12",
     "@babel/preset-env": "^7.20.2",
     "gulp-babel": "^8.0.0",
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.58.0"
+    "sass": "^1.85.1"
   }
 }
